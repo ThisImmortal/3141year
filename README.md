@@ -30,7 +30,7 @@ All this disgrace requires a system of accounting and supervision.*
 
 * GET/api/lord/idle-lords - get idle lords
 
-* Get/api/lord/ten-youngest - get ten the youngest lords
+* GET/api/lord/ten-youngest - get ten the youngest lords
 
 
 ### Planet
