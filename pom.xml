@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.task</groupId>
 	<artifactId>3141year</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>3141year</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>

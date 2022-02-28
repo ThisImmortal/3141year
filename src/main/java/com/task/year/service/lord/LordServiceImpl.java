@@ -11,13 +11,14 @@ import com.task.year.mapper.LordMapper;
 import com.task.year.payload.LordCreationPayload;
 import com.task.year.repository.LordRepository;
 import com.task.year.repository.PlanetRepository;
-import com.task.year.service.planet.PlanetService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -84,7 +85,8 @@ public class LordServiceImpl implements LordService{
     @Override
     public List<LordDTO> getTenTheYoungestLords() {
 
-        List<Lord> youngestLords = lordRepository.getTenTheYoungestLords();
+        Pageable sortedByAge = PageRequest.of(0, 10, Sort.by("age").ascending());
+        Page<Lord> youngestLords = lordRepository.findAll(sortedByAge);
 
         return youngestLords.stream().map(LordDTOMapper :: mapFromLord).
                 collect(Collectors.toList());

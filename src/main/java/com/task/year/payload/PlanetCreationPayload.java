@@ -1,8 +1,7 @@
 package com.task.year.payload;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
 
+import lombok.Data;
 import javax.validation.constraints.NotBlank;
 
 @Data

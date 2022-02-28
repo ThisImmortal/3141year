@@ -1,15 +1,12 @@
 package com.task.year.controller;
 
-
-import com.task.year.entity.Lord;
 import com.task.year.payload.LordCreationPayload;
 import com.task.year.service.lord.LordService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import javax.validation.Valid;
-import java.util.List;
+
 
 @RestController
 @RequestMapping(value = "api/lord")

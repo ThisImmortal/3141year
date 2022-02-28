@@ -2,7 +2,6 @@ package com.task.year.entity;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.*;
-
 import javax.persistence.*;
 
 @Entity
